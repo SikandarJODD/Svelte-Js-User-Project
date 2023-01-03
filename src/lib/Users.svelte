@@ -58,6 +58,7 @@
 
   let usersfilter = ({ detail }) => {
     let value = detail.toLowerCase();
+    orignalUser = usersDoc.filter((stu) => stu.userName === "Ramesh Shet");
     if (value === "all") {
       orignalUser = usersDoc;
     } else {
@@ -68,11 +69,13 @@
       });
     }
   };
+  $: brocode = orignalUser.length;
 </script>
 
 <main>
   <div class="container">
     <FilterUser on:filteruser={usersfilter} />
+    <h1>{brocode}</h1>
   </div>
   <div class="container">
     <div>

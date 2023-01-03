@@ -4,7 +4,8 @@ import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-plugins: [svelte({
-    preprocess: sveltePreprocess()
-})],
+    base: "/Svelte-Js-User-Project/",
+    plugins: [svelte({
+        preprocess: sveltePreprocess()
+    })],
 })
